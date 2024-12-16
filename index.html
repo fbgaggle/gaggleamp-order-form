@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaggleAMP Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="gaggleamp_logo.jpg" alt="GaggleAMP Logo" class="logo">
+        <h1>GaggleAMP Order Form</h1>
+    </header>
+
+    <section>
+        <p><strong>GaggleAMP shall provide Customer with a subscription for access to the GaggleAMP platform, as provided below:</strong></p>
+
+        <!-- Plan Selection -->
+        <h2>Select a Plan</h2>
+        <label for="plan">Plan Size:</label>
+        <select id="plan">
+            <option value="10">10 Users - $2,000 Annually</option>
+            <option value="25">25 Users - $3,000 Annually</option>
+            <option value="50">50 Users - $5,000 Annually</option>
+        </select>
+        <label for="subscription">Subscription Type:</label>
+        <select id="subscription">
+            <option value="annual">Annual</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <button id="add-plan">Add Plan</button>
+
+        <!-- Add-ons -->
+        <h2>Add-ons</h2>
+        <label for="addon">Select Add-on:</label>
+        <select id="addon">
+            <option value="300">AI Member Paraphrase - $300 Annually</option>
+            <option value="800">Auto-AI Paraphrase - $800 Annually</option>
+            <option value="1000">Auto-AI Suite - $1,000 Annually</option>
+        </select>
+        <button id="add-addon">Add Add-on</button>
+
+        <!-- Order Summary -->
+        <h2>Order Summary</h2>
+        <table id="order-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p><strong>Subtotal:</strong> $<span id="subtotal">0</span></p>
+        <label for="discount">Discount (%):</label>
+        <input type="number" id="discount" value="0">
+        <p><strong>Grand Total:</strong> $<span id="total">0</span></p>
+    </section>
+
+    <footer>
+        <h3>Client Information</h3>
+        <p>Effective Date: ____________</p>
+        <p>Customer: ____________________</p>
+        <p>Signature: ____________________</p>
+        <p>Name: ____________________</p>
+        <p>Title: ____________________</p>
+        <p>Address: ____________________</p>
+        <p>PO Number: ____________________</p>
+        <button id="export-pdf">Generate PDF</button>
+    </footer>
+</body>
+</html>
